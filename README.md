@@ -25,7 +25,7 @@ This version is of the lastest stable build to be released as of **04/10/2026**.
 > Python 3.14 does NOT work with this application if downloading and running the Python Fork of the application
 
 ### Version Build
-This verison of the application was built using Tkinter and Customtkinter GUI libaries. View the list below to see what external python modules are needed to run the application (if using the python fork)
+This verison of the application was built using Tkinter and Customtkinter GUI libaries. View the list below to see what external python modules are needed to run the application (if using the python files)
 - Tkinter / Tk (Linux Distributions)
 - Customtkinter (All Systems)
 - Pyserial (All Systems)
@@ -57,23 +57,23 @@ pip install customtkinter pillow irobot_edu_sdk pyserial
 - None
 
 ## Setup
-### Windows 10 or 11 Fork
-If downloading and using this application using the Windows systems fork, it has been made extremely easy. The only downside is that this version of the app is that it can not be changed at all. This is a precompiled build of the application. Some features are missing, like being able to connect to a Create3 Robot and needing a Root Connect controller. However, if just wanting to use the touch controls, this app should make it very easy and quick to do so. Let's start!
-1. First, start off by downloading repository or cloning it.
-2. After extracting the repository (if applicable), navigate into the folder and find the setup wizard provided named 'root_connect_setup.exe'
-3. Run the setup wizard
+### Windows 10 or 11 Specific
+If downloading and using this application for Windows, it has been made extremely easy. The only downside is that version of the app can not be changed at all. This is a precompiled build of the application. Some features are missing, like being able to connect to a Create3 Robot and needing a Root Connect controller. However, if just wanting to use the touch controls, this app should make it very easy and quick to do so. Let's start!
+1. First, go to the releases tab and find the current release of the app
+2. Download the 'root_connect_setup.exe' from the release tab
+3. Find and run the setup wizard you just downloaded
 4. Follow the steps on screen
 > [!IMPORTANT]
-> It is recommended to install the application NOT in the program folders, but rather in the downloads folder
+> It is recommended to install the application NOT in the program folders, but somewhere in the users folder
 > If not done, you may recieve errors with permission errors for trying to write to files.
 
 That's it! The application should be where you set it to and a desktop icon will appear (if kept checked); your ready to start moving!
 
-### Python Fork
-The Python fork for this application is also straightforward. It is assumed that you have all the external modules necessary to run the application as shown in the version section. With this version of the fork, you have the ability to change how the application works and behaves if you have prior knowledge with coding in CustomTkinter and Tkinter. For this version, you only need to download or clone the git repository. Once down, you'll have access to the full python files to either modify or use the application using Python. If any forks are made of this application, please make reference back to this repository, thanks! 
+### Python Files
+The Python files for this application is also straightforward. It is assumed that you have all the external modules necessary to run the application as shown in the version section. With this version, you have the ability to change how the application works and behaves if you have prior knowledge with coding in CustomTkinter and Tkinter. For this version, you only need to download or clone the git repository. Once done, you'll have access to the full python files to either modify or use the application using Python. If any forks are made of this application, please make reference back to this repository, thanks! 
 
 > [!TIP]
 > It is recommended to use a Python 3.13 enviornment
 
 ## Issues?
-You may report issues to the issues tab, however, like mentioned above, they may or may not be enacted on. This project has a chance of not continuing future development; beware of that note, hence the Python Fork. 
+You may report issues to the issues tab, however, like mentioned above, they may or may not be enacted on. This project has a chance of not continuing future development; beware of that note, hence releasing the python files. 
