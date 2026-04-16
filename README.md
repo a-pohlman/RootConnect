@@ -69,7 +69,7 @@ If downloading and using this application for Windows, it has been made extremel
 3. Find and run the setup wizard you just downloaded
 4. Follow the steps on screen
 > [!IMPORTANT]
-> It is recommended to install the application NOT in the program folders, but somewhere in the users folder
+> It is recommended to install the application NOT in the program folders, but somewhere in the users folder.
 > If not done, you may recieve errors with permission errors for trying to write to files.
 
 That's it! The application should be where you set it to and a desktop icon will appear (if kept checked); your ready to start moving!
