@@ -1,19 +1,3 @@
-"""
-
-Developer: Aaron Pohlman
-Final Date Modified: 04/09/2026
-Name: RootConnect
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-All rights belong to iRobot in terms of the SDK, Logo, Robots, etc. 
-
-"""
-
 #import built-in modules
 from sys import exit
 from time import sleep
@@ -32,8 +16,7 @@ from irobot_edu_sdk.robots import event, Root, Create3
 from tooling.filemanager import load_info, save_info
 from tooling.theme import Theme, Icons
 from tooling.windows import ConnectControllerWindow, SettingsWindow, RobotWindow, ChangeNameWindow, AppInfoWindow
-
-__version__ = "0.2.0.04052026"
+from tooling.__init__ import __enable_pillow__, __version__
 
 class Base(CTk, Theme, Icons):
     def __init__(self) -> None:
@@ -41,11 +24,14 @@ class Base(CTk, Theme, Icons):
 
         self.geometry(f"1200x800+{int(self.winfo_screenwidth()/2 - 550)}+{int(self.winfo_screenheight()/2.2 - 400)}")
         self.title("Root Connect")
+        
+        self.deiconify()
 
         self.parent_frame = CTkFrame(self, fg_color=self.color["bg"], corner_radius=0)
         self.parent_frame.pack(expand=True, fill="both")
-
-        #self.create_photo_images() # Only use for unix development environments
+        
+        if __enable_pillow__ == False:
+            self.create_photo_images()
 
 class TempFrame(Base):
     def __init__(self) -> None:
@@ -537,6 +523,8 @@ class App(TempFrame, ActionFrame, RobotInfoFrame, ControllerFrame, StartFrame, C
         Thread(target=self.activate_robot, daemon=True).start()
 
     def activate_robot(self) -> None:
+        self.restart = True
+
         async def quick_turn(robot) -> None:
             await robot.turn_right(180)
 
@@ -615,7 +603,6 @@ class App(TempFrame, ActionFrame, RobotInfoFrame, ControllerFrame, StartFrame, C
         if messagebox.askyesno("RC - Cutting Connection", "Are you sure you want to stop connection?"):
             self.robot_disconnect = True
             self.update()
-            self.restart = True
             self.destroy()
         
     def ask_to_exit(self) -> None:
