@@ -4,7 +4,7 @@ from threading import Thread
 from tkinter import messagebox # tkinter is not built into Linux Distributions
 
 #import external modules
-from customtkinter import CTk, CTkToplevel, CTkFrame, CTkScrollableFrame, CTkLabel, CTkButton, CTkSegmentedButton, CTkProgressBar, CTkComboBox, CTkSlider, CTkSwitch, CTkEntry, StringVar
+from customtkinter import CTkToplevel, CTkFrame, CTkScrollableFrame, CTkLabel, CTkButton, CTkSegmentedButton, CTkProgressBar, CTkComboBox, CTkSlider, CTkSwitch, CTkEntry, StringVar
 from serial.tools.list_ports import comports as find_devices
 from bleak import BleakScanner
 from irobot_edu_sdk.backend.bluetooth import Bluetooth
@@ -393,9 +393,9 @@ class AppInfoWindow(BaseWindow):
         self.place_window()
 
     def create_window_objects(self) -> None:
-        self.app_info_company_label = CTkLabel(self.scrollable_frame, text="Open Source By: RootConnect", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
+        self.app_info_company_label = CTkLabel(self.scrollable_frame, text="RootConnect", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
         self.app_info_version_label = CTkLabel(self.scrollable_frame, text=f"Version: {self.version}", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
-        self.app_info_date_label = CTkLabel(self.scrollable_frame, text="Build Date: 04/07/2026", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
+        self.app_info_date_label = CTkLabel(self.scrollable_frame, text="Build Date: 04/15/2026", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
         self.app_info_build_label = CTkLabel(self.scrollable_frame, text="UI Library: Tkinter/CustomTkinter", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
         self.app_info_license_label = CTkLabel(self.scrollable_frame, text="License: MIT Agreement", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
         self.app_info_developer_label = CTkLabel(self.scrollable_frame, text="Developer: Aaron Pohlman", text_color=self.text_color["normal"], font=("Arial",17,"normal"))
