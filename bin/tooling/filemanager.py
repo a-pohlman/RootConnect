@@ -1,19 +1,17 @@
 #import internal modules
-from tooling.__base_dir__ import __base_dir__
+from tooling.__init__ import __file_dir__
 
 def save_info(info:list) -> None:
-    file_path: str = __base_dir__+"\\tooling\\cache.txt"
 
-    with open(file=file_path, mode="w") as file:
+    with open(file=__file_dir__, mode="w") as file:
         for item in info:
             file.write(f"{item}\n")
 
 def load_info() -> list:
     info:list = []
-    file_path: str = __base_dir__+"\\tooling\\cache.txt"
 
     try:
-        with open(file=file_path, mode="r") as file:
+        with open(file=__file_dir__, mode="r") as file:
             while True:
                 item = file.readline()
                 if len(item) == 0: break
