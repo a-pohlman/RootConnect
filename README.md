@@ -51,7 +51,8 @@ pip install customtkinter pillow irobot_edu_sdk pyserial
 ```
 
 ### Bug Fixes
-- None
+- Fixed controller not disconnecting on app closing
+- Fixed not being able to find controller
 
 ### Change Log (04/15/2026)
 - App now resets after closing controls window without having to use 'exit connection' button
