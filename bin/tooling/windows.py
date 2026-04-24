@@ -14,6 +14,7 @@ from irobot_edu_sdk.robots import event, Root, Create3
 from tooling.ctk_listbox import CTkListbox
 from tooling.ctk_spinbox import CTkSpinbox
 from tooling.theme import Theme
+from tooling.__init__ import __system__
 
 class BaseWindow(CTkToplevel, Theme):
     def __init__(self) -> None:
@@ -23,7 +24,8 @@ class BaseWindow(CTkToplevel, Theme):
         self.minsize(500,500)
         self.maxsize(500,600)
 
-        self.grab_set() ## Windows environments only!
+        if __system__.startswith("win"):
+            self.grab_set() # Windows environments only!
 
         self.save_window_info: bool = False
 
@@ -121,6 +123,13 @@ class ConnectControllerWindow(BaseWindow):
         if self.connection_type.get() == "Serial": self.place_serial_window()
         elif self.connection_type.get() == "BLE": self.place_ble_window()
 
+    def count_char(self, string:str, char:str) -> int:
+        count:int = 0
+        for i in string:
+            if i == char: count += 1
+        
+        return count
+
     def run_async_func(self) -> None:
         run_asyncio(self.find_ble_devices())
 
@@ -137,7 +146,7 @@ class ConnectControllerWindow(BaseWindow):
 
             device_address = device_address.strip()    
             device_name = device_name.strip()
-            if device_name == "None": pass
+            if device_name == "None" or self.count_char(device_name, "-") > 1: pass
             else: 
                 self.ble_devices.append([device_address, device_name])
 
