@@ -32,3 +32,4 @@ __base_dir__ = parse_dir_path(__file__, "bin")
 __image_dir__ = f"{__base_dir__}{__path_separator__}images{__path_separator__}"
 __file_dir__ = f"{__base_dir__}{__path_separator__}tooling{__path_separator__}cache.txt"
 __enable_pillow__ = True # <== Only change if the Pillow module is not working!
+__system__ = sys.platform
