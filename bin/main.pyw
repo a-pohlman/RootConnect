@@ -11,6 +11,7 @@ from bleak import BleakClient
 from serial import Serial
 from irobot_edu_sdk.backend.bluetooth import Bluetooth
 from irobot_edu_sdk.robots import event, Root, Create3
+from time import sleep
 
 #import internal modules
 from tooling.filemanager import load_info, save_info
@@ -318,6 +319,7 @@ class App(TempFrame, ActionFrame, RobotInfoFrame, ControllerFrame, StartFrame, C
         super().__init__()
 
         self.robot: Root | Create3 = ...
+        self.controller_thread: Thread = ...
 
         self.read_controller_on: bool = False
         self.restart: bool = False
@@ -472,9 +474,11 @@ class App(TempFrame, ActionFrame, RobotInfoFrame, ControllerFrame, StartFrame, C
             self.read_controller_one = False
         else:
             if self.connection_type == "Serial":
-                Thread(target=self.read_serial_controller, daemon=True).start()
+                self.controller_thread = Thread(target=self.read_serial_controller, daemon=True)
+                self.controller_thread.start()
             elif self.connection_type == "BLE":
-                Thread(target=self.run_async_ble_connection, daemon=True).start()
+                self.controller_thread = Thread(target=self.run_async_ble_connection, daemon=True)
+                self.controller_thread.start()
         
     def stop_reading_controller(self) -> None:
         self.read_controller_on = False
@@ -614,9 +618,14 @@ if __name__ == "__main__":
     app = App()
     app.mainloop()
 
-    if app.restart:
-        save_info([app.robot_name, app.robot_speed, app.robot_type, app.robot_battery, app.a_binding, app.b_binding, app.x_binding, app.y_binding, app.honk_pitch,"1"]) 
-        exit(5)
-    else:
-        save_info([app.robot_name, app.robot_speed, app.robot_type, app.robot_battery, app.a_binding, app.b_binding, app.x_binding, app.y_binding, app.honk_pitch,"0"]) 
-        exit()
+    try:
+        app.read_controller_on = False
+        app.controller_thread.join()
+    except: pass
+    finally:
+        if app.restart:
+            save_info([app.robot_name, app.robot_speed, app.robot_type, app.robot_battery, app.a_binding, app.b_binding, app.x_binding, app.y_binding, app.honk_pitch,"1"]) 
+            exit(5)
+        else:
+            save_info([app.robot_name, app.robot_speed, app.robot_type, app.robot_battery, app.a_binding, app.b_binding, app.x_binding, app.y_binding, app.honk_pitch,"0"]) 
+            exit()
