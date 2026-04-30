@@ -24,6 +24,9 @@ This version is of the latest stable build to be released as of **04/15/2026**. 
 > [!CAUTION]
 > Python 3.14 does NOT work with this application if downloading and running the Python files of the application
 
+> [!CAUTION]
+> You must have a Bluetooth antenna to use on your computer! Otherwise, the app will not be able to connect with a Bluetooth controller, or with the iRobot Root 1 robots
+
 ### Version Build
 This version of the application was built using Tkinter and Customtkinter GUI libraries. View the list below to see what external python modules are needed to run the application (if using the python files)
 - Tkinter / Tk (Linux Distributions)
