@@ -75,8 +75,14 @@ If downloading and using this application for Windows, it has been made extremel
 
 That's it! The application should be where you set it to and a desktop icon will appear (if kept checked); your ready to start moving!
 
-### Python Files
-The Python files for this application is also straightforward. It is assumed that you have all the external modules necessary to run the application as shown in the version section. With this version, you have the ability to change how the application works and behaves if you have prior knowledge with coding in CustomTkinter and Tkinter. For this version, you only need to download or clone the git repository. Once done, you'll have access to the full python files to either modify or use the application using Python. If any forks are made of this application, please make reference back to this repository, thanks! 
+### Python Version
+The Python Version for this application is also straightforward. Simply clone the repository and you should be able to run the python application in an appropriate location. It is assumed that you have all the external modules necessary to run the application as shown in the version section. You should be using the file named run.pyw to run the application as this is what allows it to restart and properly save, unlike main.pyw
+
+> [!TIP]
+> If the run.pyw file doesn't do anything or returns an error, you may have to configure it just a little bit. Open the file in a IDE or text editor, and using the comments, uncomment the correct conditional and comment the other one (or delete it).
+> If you need to configure other app defaults for any reason, you can find them in tooling >> \_\_init__.py
+
+With this version, you have the ability to change how the application works and behaves if you have prior knowledge with coding in CustomTkinter and Tkinter. For this version, you only need to download or clone the git repository. Once done, you'll have access to the full python files to either modify or use the application using Python. If any forks are made of this application, please make reference back to this repository, thanks! 
 
 > [!TIP]
 > It is recommended to use a Python 3.13 environment, as mentioned earlier, Python 3.14 is NOT compatible in its current state.
