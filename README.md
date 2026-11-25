@@ -7,6 +7,10 @@
 ## Description
 An application that connects and can move around iRobot's Root 1 education robots with a unique, clean interface. The application is able to connect iRobot Root 1 robot to move the robot around a given surface. Also available is the feature of attaching an external Root Controller to move the robot around. Created by Aaron Pohlman for the Maker Engineering Project at Ohio Northern University.
 
+<p align="center">
+  <img src="repository_images/rootconnect_0.3.0_main.png" alt="RootConnect Logo" width="500">
+</p>
+
 ## Features 
 - New user interface
 - Allows the ability to change robots name
@@ -38,6 +42,26 @@ This version of the application was built using Tkinter and Customtkinter GUI li
 4. Follow the steps on screen
 
 The application should be where you set it to and a desktop icon will appear (if kept checked); your ready to start moving! In order to find the application folder, it will be in the Users > YOUR_USERNAME folder.
+
+### Python Version
+> [!CAUTION]
+> Python 3.12 is strongly recommended as Python ^3.12 will not work for this application!
+
+> [!IMPORTANT]
+> Bleak module 0.22.0 was and should be used to communicate with the robot. Pip commands may not be able to install directly from a command line. It is recommended to download Bleak 0.22.0 from PyPl and build the wheel yourself using pip.
+
+1. Install and setup a Python environment either on host or virtual
+2. Install all of the required python modules
+   ```
+   pip install PySide6
+   pip install bleak 0.22.2
+   pip install irobot_edu_sdk
+   ```
+   > [!TIP]
+   > Ensure that you have the correct versions for Python (3.12) and the Bleak Module (0.22.2)
+3. Download or clone this repository
+4. Navigate inside the cloned or downloaded folder, RootConnect > RootConnect_0.3.0 > bin
+5. Use Python to run the file called: root_connect.pyw
 
 ## Issues?
 You may report issues to the issues tab, however, like mentioned above, they may or may not be enacted on.
