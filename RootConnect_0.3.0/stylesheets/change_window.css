@@ -1,0 +1,30 @@
+QMainWindow {
+    background-color: --bg;
+}
+
+#window_header {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#name_submit_btn {
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: black;
+}
+
+#name_submit_btn:pressed {
+    background-color: rgb(40,40,40);
+}
+
+#warning_label {
+    font-size: 12px;
+    color: rgb(200, 200, 200);
+}
+
+#field {
+    background-color: --light_bg;
+    border-radius: 15px;
+    margin: 10px;
+}

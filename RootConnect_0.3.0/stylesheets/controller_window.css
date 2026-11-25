@@ -1,0 +1,85 @@
+QMainWindow {
+    background-color: --bg;
+}
+
+QStackedWidget {
+    margin: 70px;
+}
+
+RootButton {
+    background-color: black;
+}
+
+#nav_frame {
+    background-color: --light_bg;
+    border-radius: 15px;
+    margin: 15px 30px 10px 30px;
+}
+
+#touch_controls_frame,
+#controller_frame {
+    background-color: --light_bg;
+    border-radius: 30px;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: --gr;
+    padding: 20px;
+}
+
+#touch_controls_frame:hover,
+#controller_frame:hover {
+    border-width: 0px 0px 3px 0px;
+}
+
+#robot_name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#battery_label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#touch_controls_button,
+#external_controls_button {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#touch_up,
+#touch_left,
+#touch_right,
+#touch_down,
+#touch_a,
+#touch_b,
+#touch_x,
+#touch_y {
+    border-radius: 20px;
+}
+
+#touch_up:pressed,
+#touch_left:pressed,
+#touch_right:pressed,
+#touch_down:pressed,
+#touch_a:pressed,
+#touch_b:pressed,
+#touch_x:pressed,
+#touch_y:pressed,
+#controller_connect_btn:pressed,
+#touch_controls_button:pressed,
+#external_controls_button:pressed {
+    background-color: rgb(40,40,40);
+}
+
+#controller_message {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#controller_connect_btn {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}

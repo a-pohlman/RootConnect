@@ -1,0 +1,65 @@
+/* Globals */
+
+MainWindow {
+    background-color: --bg;
+}
+
+QLabel {
+    font-size: 18px;
+}
+
+/* Navbar Styling */
+#nav {
+    background-color: --light_bg;
+    border-width: 0px 0px 3px 0px;
+    border-style: solid;
+    border-color: --gr;
+}
+
+#nav_add_button,
+#nav_start_button,
+#nav_help_button,
+#nav_settings_button {
+    background-color: black;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#nav_add_button:pressed,
+#nav_start_button:pressed,
+#nav_help_button:pressed,
+#nav_settings_button:pressed,
+#robot_frame_header_menu_button:pressed {
+    background-color: rgb(40,40,40);
+}
+
+/* Main Styling */
+#main_message_frame {
+    background-color: --light_bg;
+    border-radius: 20px;
+}
+
+#main_scroll_area,
+#main_scroll_container {
+    background-color: --bg;
+    border: none;
+}
+
+/* Robot Frame */
+#robot_frame {
+    background-color: --light_bg;
+    border-radius: 30px;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: --gr;
+}
+
+#robot_frame:hover {
+    border-width: 0px 0px 3px 0px;
+}
+
+#robot_frame_header_menu_button {
+    background-color: black;
+    border-radius: 15px;
+}

@@ -1,0 +1,36 @@
+QMainWindow {
+    background-color: --bg;
+}
+
+#devices_header {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#open_connection_button {
+    background-color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+}
+
+#device_scroll_area {
+    background-color: --light_bg;
+    border-radius: 15px;
+}
+
+#device_button {
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+}
+
+#device_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#device_address {
+    font-size: 14px;
+}

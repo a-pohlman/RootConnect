@@ -1,0 +1,24 @@
+QMainWindow {
+    background-color: --bg;
+}
+
+QLabel {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QComboBox {
+    font-size: 13px;
+}
+
+RootButton {
+    font-size: 13px;
+    border-color: transparent;
+    border-radius: 15px;
+    background-color: black;
+}
+
+#window_header {
+    font-size: 17px;
+    font-weight: bold;
+}
