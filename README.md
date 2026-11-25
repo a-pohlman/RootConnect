@@ -11,6 +11,11 @@ An application that connects and can move around iRobot's Root 1 education robot
   <img src="repository_images/rootconnect_0.3.0_main.png" alt="RootConnect Logo" width="500">
 </p>
 
+<p align="center">
+  <img src="repository_images/rootconnect_0.3.0_controller.png" alt="RootConnect Logo" width="500">
+</p>
+
+
 ## Features 
 - New user interface
 - Allows the ability to change robots name
