@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="repository_images/RootConnect_Logo_V2(transparent).png" alt="RootConnect Logo" width="500">
+</p>
+
 # RootConnect
 
 ## Description
