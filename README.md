@@ -62,8 +62,10 @@ The application should be where you set it to and a desktop icon will appear (if
    pip install bleak 0.22.2
    pip install irobot_edu_sdk
    ```
-   > [!TIP]
-   > Ensure that you have the correct versions for Python (3.12) and the Bleak Module (0.22.2)
+   
+> [!TIP]
+> Ensure that you have the correct versions for Python (3.12) and the Bleak Module (0.22.2)
+
 3. Download or clone this repository
 4. Navigate inside the cloned or downloaded folder, RootConnect > RootConnect_0.3.0 > bin
 5. Use Python to run the file called: root_connect.pyw
